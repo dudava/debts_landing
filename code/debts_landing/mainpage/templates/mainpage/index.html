@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/section_preview.css' %}">
+  <link rel="stylesheet" href="{% static 'css/section_debts_writtenoff.css' %}">
+  <link rel="stylesheet" href="{% static 'css/section_advantages.css' %}">
+  <link rel="stylesheet" href="{% static 'css/section_services.css' %}">
+  <link rel="stylesheet" href="{% static 'css/section_stages.css' %}">
+  <link rel="stylesheet" href="{% static 'css/section_cases_won.css' %}">
+  <link rel="stylesheet" href="{% static 'css/section_dont_lose_time.css' %}">
+  <style>
+    .preview-box-question span::before {
+      background-image: url('{% static "img/question.svg" %}')
+    }
+    .debts-writtenoff-day-total li::before {
+      background-image: url('{% static "img/dashed.svg" %}');
+    }
+  </style>
+{% endblock %}
+
+{% block title %}Компания Освободим официальный сайт по банкротству физ. лиц в Москве, СПб и регионах России{% endblock %}
+
+{% block content %}
+{% include 'mainpage/feedback_modal.html' %}
+  <section class="preview">
+    <div class="wrap">
+      <div class="preview-wrap">
+        <div class="preview-content">
+          <h2 class="preview-header">
+            Возьмем на себя ваши проблемы с долгами<br>
+            <span>и решим их<span>
+          </h2>
+          <p class="preview-description">
+            В нашей команде проверенные Арбитражные управляющие, Опытные юристы, Заботливые сотрудники.
+          </p>
+          <ul class="preview-list">
+            <li>
+              Защитим от коллекторов
+            </li>
+            <li>
+              Гарантируем списание ваших долгов по договору или вернём деньги
+            </li>
+          </ul>
+          <div class="preview-controls">
+            <button class="preview-green-btn feedback-button">
+              Получить бесплатную консультацию  
+            </button>
+          </div>
+          <div class="preview-box">
+            <div class="preview-box-question">
+              <span>Что будет на консультации</span>
+            </div>
+            <div class="preview-box-answer">
+              <span>
+                Выслушаем вас, ответим на вопросы, расскажем про услуги<br>
+                и подберем решение для вашей проблемы.
+              </span>
+              <p>Заполните короткую форму и мы перезвоним вам в удобное время. <strong>Отвечаем на все заявки.</strong></p>
+            </div>
+          </div>
+        </div>
+        <img class="preview-img" src="{% static 'img/man.webp'%}">
+      </div>
+    </div>
+  </section>
+  <section class="debts-writtenoff">
+    <div class="wrap">
+      <div class="debts-writtenoff-box">
+        <h3 class="debts-writtenoff-title">Уже списали долгов на сумму:</h3>
+        <p class="debts-writtenoff-total">4 124 485 160,16 ₽ рублей</p>
+        <div class="debts-writtenoff-day-total">
+          <li>
+            <p>За последние 7 дней:</p>
+            <span>31 516 170,00 ₽</span>
+          </li>
+        </div>
+      </div>
+      <button class="debts-writtenoff-btn feedback-button">Списать мои долги</button>
+    </div>
+  </section>
+  <section class="advantages">
+    <div class="wrap">
+      <ul class="advantages-list">
+        <li>
+          <div class="advantage-card">
+            <div class="advantage-img">
+              <img src="{% static 'img/main_icons/icon1.svg' %}">
+            </div>
+            <div class="advantage-content">
+              Все наши консультации по телефону и в офисе – <span>бесплатны</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="advantage-card">
+            <div class="advantage-img">
+              <img src="{% static 'img/main_icons/icon2.svg' %}">
+            </div>
+            <div class="advantage-content">
+              Очень гибкая рассрочка, можем подобрать условия <span>под каждого человека<span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="advantage-card">
+            <div class="advantage-img">
+              <img src="{% static 'img/main_icons/icon3.svg' %}">
+            </div>
+            <div class="advantage-content">
+              <span>Гарантия результата</span> прописана в договоре
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="advantage-card">
+            <div class="advantage-img">
+              <img src="{% static 'img/main_icons/icon6.svg' %}">
+            </div>
+            <div class="advantage-content">
+              <span>Честные специалисты,</span> которые говорят на понятном языке
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="services">
+    <div class="wrap">
+      <div class="services-title">Услуги</div>
+      <div class="services-list-wrap">
+        <ul class="services-list">
+          <li>
+            <div class="service-card">
+              <div class="service-card-info">
+                <h3 class="service-card-title">Банкротство физических лиц</h3>
+                <p class="service-card-description">
+                  Освободитесь от тяжелой ноши задолженностей и связанного с ними стресса
+                </p>
+              </div>
+              <div class="service-card-img">
+                  <img src="{% static 'img/main_services/img1.webp' %}" alt="">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="service-card">
+              <div class="service-card-info">
+                <h3 class="service-card-title">Банкротство с ипотекой</h3>
+                <p class="service-card-description">
+                  Когда исчезает или ухудшается возможность выполнять обязательства по ипотечному кредиту
+                </p>
+              </div>
+              <div class="service-card-img">
+                <img src="{% static 'img/main_services/img2.webp' %}" alt="">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="service-card">
+              <div class="service-card-info">
+                <h3 class="service-card-title">Банкротство поручителя</h3>
+                <p class="service-card-description">
+                  Процедура признания финансовой несостоятельности гражданина
+                </p>
+              </div>
+              <div class="service-card-img">
+                <img src="{% static 'img/main_services/img3.webp' %}" alt="">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="service-card">
+              <div class="service-card-info">
+                <h3 class="service-card-title">Возврат страховки</h3>
+                <p class="service-card-description">
+                  Вернём деньги за страховку по кредиту в досудебном и судебном порядке
+                </p>
+              </div>
+              <div class="service-card-img">
+                <img src="{% static 'img/main_services/img4.webp' %}" alt="">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="service-card">
+              <div class="service-card-info">
+                <h3 class="service-card-title">Защита прав должника</h3>
+                <p class="service-card-description">
+                  В случае нарушения законодательства защитим права в исполнительном производстве
+                </p>
+              </div>
+              <div class="service-card-img">
+                <img src="{% static 'img/main_services/img5.webp' %}" alt="">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="stages">
+    <div class="wrap">
+      <div class="stages-box">
+        <h2 class="stages-header">
+          <span>В ходе процедуры</span>
+          банкротства мы:
+        </h2>
+        <div class="stages-container">
+          <div class="stages-list-wrap stages-list-wrap-1">
+            <span class=>Исключаем:</span>
+            <ul class="stages-list stages-list-1">
+              <li class="left">
+                Долги по кредитам перед банками
+              </li>
+              <li class="right">
+                Долги перед микрофинансовыми
+                организациями
+              </li>
+              <li class="right">
+                Исполнительные производства
+                и связанные с ними аресты имущества и взыскания
+              </li>
+              <li class="right">
+                Давление кредиторов
+              </li>
+              <li class="right">
+                Преследование коллекторами
+              </li>
+            </ul>
+          </div>
+          <div class="stages-list-wrap stages-list-wrap-2">
+            <span>Сохраняем:</span>
+            <ul class="stages-list stages-list-2">
+              <li class="left left-2">Ваш дом и квартиру</li>
+              <li class="right">Вашу мебель и бытовую технику</li>
+              <li class="left left-3">Вашу заработную плату</li>
+              <li class="left left-1">Ваше душевное спокойствие</li>
+              <li class="right">Ваше финансовое благополучие</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cases-won">
+    <div class="wrap">
+      <h2 class="cases-won-header">Выигранные дела</h2>
+      <div class="cases-won-slider">
+        <button class="slider-button slider-button-prev"></button>
+        <button class="slider-button slider-button-next"></button>
+        <ul>
+          {% for case in cases %}
+          <li>
+            {% include 'legal_cases/case.html' with case=case %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <script src="{% static 'js/slider.js' %}"></script>
+    </div>
+  </section>
+  <section class="dont-lose-time">
+    <div class="wrap">
+      <div class="time-wrap">
+        <h2 class="time-title">Не теряйте время!</h2>
+        <p class="time-subtitle">Записывайтесь на бесплатную консультацию и будем, как взрослые люди, исправлять положение!</p>
+        <div class="time-btn-wrap">
+          <button class="preview-green-btn time-button feedback-button">Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/popup_message.css' %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  {% block head %}{% endblock %}
+
+  <style>
+    .header-telephone::before {
+      background-image: url('{% static "img/message.svg"%}');
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="header-wrap">
+        <div class="header-contact">
+          <p class="header-time">Пн - сб 09:00-21:00</p>
+          <div class="header-telephone-wrap">
+            <div class="header-telephone">
+              <a href="tel:+7 (495) 106-46-36">+7 (495) 106-46-36</a>
+            </div>
+          </div>
+          <button class="header-button feedback-button">Перезвоните мне</button>
+        </div>
+        <div class="header-logo">
+          <img src="{% static 'img/logo.svg' %}" alt="">
+        </div>
+      </div>
+    </div>
+  </header>
+  {% block content %}{% endblock %}
+  <footer>
+    <div class="footer-contacts">
+      <p>ООО СВОБОДА</p>
+      <p>ОГРН 1227700574496</p>
+      <p>ИНН 7720874679</p>
+      <p>КПП 772001001</p>
+      <p>Р/счет № 40702810510001183959</p>
+      <p>Банк АО "ТИНЬКОФФ БАНК"</p>
+      <p>К/счет № 30101810145250000974</p>
+      <p>БИК 044525974</p>
+    </div>
+  </footer>
+  {% if messages %}
+  <div class="popup-message">
+      {% for message in messages %}
+      <p>{{ message }}</p>
+      {% endfor %}
+  </div>
+  {% endif %}  
+  <script src="{% static 'js/popup_message.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>

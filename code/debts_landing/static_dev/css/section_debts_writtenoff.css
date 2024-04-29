@@ -1,0 +1,128 @@
+.debts-writtenoff {
+    padding-top: 210px;
+    padding-bottom: 136px;
+    background-color: #F6F6F6;
+}
+.debts-writtenoff-box {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    border-radius: 0 80px;
+    background-color: #307FE2;
+    box-shadow: -10px 10px 48px 0 rgba(3, 7, 49, 0.12);
+}
+.debts-writtenoff-title {
+    text-align: center;
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 700;
+    color: #fff;
+}
+.debts-writtenoff-total {
+    text-align: center;
+    font-size: 46px;
+    line-height: 56px;
+    font-weight: 600;
+    color: #93DA49;
+    margin-top: 32px;
+}
+.debts-writtenoff-day-total {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    max-width: 576px;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+.debts-writtenoff-day-total li {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.debts-writtenoff-day-total li::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-repeat: repeat;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.debts-writtenoff-day-total p {
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    background-color: #307FE2;
+    color: #fff;
+    padding-right: 6px;
+    z-index: 10;
+}
+.debts-writtenoff-day-total span {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    background-color: #307FE2;
+    color: #93DA49;
+    z-index: 10;
+}
+.debts-writtenoff-btn {
+    display: block;
+    background-color: #A5E1FD;
+    color: #307FE2;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 64px;
+    padding: 16px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 36px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 10px 20px 0px rgba(3, 7, 49, 0.12);
+    transition: 0.3s outline;
+}
+.debts-writtenoff-btn:hover {
+    outline: 8px solid rgba(165, 225, 253, 0.3);
+}
+.debts-writtenoff-btn:focus-visible {
+    border: none;
+}
+@media screen and (max-width: 768px) {
+    .debts-writtenoff-box {
+        padding: 32px 16px;
+        border-radius: 0px 48px;
+    }
+    .debts-writtenoff-title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .debts-writtenoff-total {
+        margin-top: 24px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .debts-writtenoff-day-total {
+        margin-top: 48px;
+    }
+    .debts-writtenoff-day-total li{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        text-align: center;
+    }
+    .debts-writtenoff-day-total li::before {
+        display: none;
+    }
+    .debts-writtenoff-day-total p {
+        background-color: transparent;
+        font-size: 16px;
+    }
+    .debts-writtenoff-day-total span {
+        background-color: transparent;
+        font-size: 16px;
+    }
+}

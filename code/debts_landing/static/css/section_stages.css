@@ -1,0 +1,142 @@
+.stages {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #F6F6F6;
+}
+.stages-box {
+    background-color: #fff;
+    padding-top: 40px;
+    border-radius: 0px 80px 80px 80px;
+}
+.stages-header {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: #1E1E1E;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 46px;
+}
+.stages-header span{
+    color: #307FE2;
+}
+.stages-container {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.stages-list-wrap span {
+    display: block;
+    position: relative;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #1E1E1E;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 1;
+}
+.stages-list-wrap span::before {
+    position: absolute;
+    content: "";
+    width: 219px;
+    height: 16px;
+    left: -6px;
+    bottom: 5px;
+    z-index: -1;
+}
+.stages-list-wrap-1 span::before {
+    background-color: #A5E1FD;
+}
+.stages-list-wrap-2 span::before {
+    background-color: #93DA49;
+}
+
+.stages-list {
+    display: grid;
+    margin-top: 24px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.stages-list li {
+    display: block;
+    width: fit-content;
+    border-radius: 0px 24px;
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.stages-list-1 span::before{
+    background-color: #A5E1FD;
+}
+.stages-list-1 li {
+    background-color: #A5E1FD;
+    color: #307FE2;
+    opacity: 0.4;
+}
+
+.stages-list-2 span::before {
+    background-color: #93DA49;
+}
+.stages-list-2 li {
+    background-color: #93DA49;
+    color: #fff;
+}
+
+
+.stages-list .left {
+    margin-right: auto;
+}
+.stages-list .right {
+    margin-left: auto;
+}
+.stages-list .left-1 {
+    margin-left: 50px;
+} 
+.stages-list .left-2 {
+    margin-left: 60px;
+}
+.stages-list .left-3 {
+    margin-left: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .stages-header {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .stages-container {
+        grid-template-columns: 1fr;
+        padding: 8px;
+        padding-top: 24px;
+    }
+    .stages-list-wrap span {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .stages-list-wrap span::before {
+        width: 169px;
+        left: -2px;
+        height: 11px;
+        bottom: 3px;
+    }
+    .stages-list {
+        gap: 12px;
+        margin-top: 16px;
+    }
+    .stages-list li{
+        width: 100%;
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .stages-list .right {
+        margin: 0;
+    }
+    .stages-list .left {
+        margin: 0;
+    }
+}

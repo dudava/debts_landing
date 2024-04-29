@@ -1,0 +1,39 @@
+{% load static %}
+<div class="feedback-modal">
+  <div class="feedback-modal-content">
+    <span class="feedback-modal-badge">Отвечаем на все заявки</span>
+    <div class="feedback-modal-header">
+      <div class="feedback-close-button-wrap">
+        <span class="feedback-close-button">&times;</span>
+      </div>
+      <h2>Получить <span>бесплатную</span> консультацию</h2>
+      <p>Оставьте ваши контакты,<br>
+        мы Вам перезвоним и проконсультируем</p>
+        {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+    </div>
+    <div class="feedback-modal-body">
+      <form method="post" action="{% url 'feedback:form' %}">
+        {% csrf_token %}
+        <ul class="feedback-modal-form">
+          {% for field in form %}
+            <li>
+              {{ field }}
+            </li>
+          {% endfor %}
+          <li>
+            <button type="submit" class="feedback-modal-form-button preview-green-btn">Отправить</button>
+          </li>
+          <li></li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="{% static 'css/feedback_modal.css' %}">
+<script src="{% static 'js/feedback_modal.js' %}" defer></script>

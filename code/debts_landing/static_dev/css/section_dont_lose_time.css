@@ -1,0 +1,22 @@
+.dont-lose-time {
+    padding-top: 35px;
+}
+.time-wrap {
+    margin: 0 auto;
+    max-width: 600px;
+}
+.time-title {
+    color: #93DA49;
+    font-weight: 700;
+    font-size: 46px;
+    text-align: center;
+}
+.time-subtitle {
+    margin-top: 12px;
+    font-size: 18px;
+    text-align: center;
+}
+.time-button {
+    margin: 0 auto;
+    margin-top: 26px;
+}

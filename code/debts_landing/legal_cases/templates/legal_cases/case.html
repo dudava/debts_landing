@@ -1,0 +1,21 @@
+{% load static %}
+{% load float_number %}
+<div class="cases-won-card">
+    <div class="cases-won-card-img">
+      {% comment %} <img src="{% static 'img/case_1.png' %}" alt=""> {% endcomment %}
+    </div>
+    <div class="cases-won-card-content">
+      <h3 class="cases-won-card-title">   Дело № {{ case.number }} </h3>
+      <ul class="cases-won-card-list">
+        <li><p> Город: </p><span> {{ case.city }} </span></li>
+        <li><p> Сумма долга: </p><span> {{ case.amount_debt|with_spaces }} </span></li>
+        <li><p> Списано долга: </p><span> {{ case.writenoff_debt|with_spaces }} </span></li>
+        <li><p> Кредитов: </p><span> {{ case.number_credits }} </span></li>
+        <li><p> Начало работы: </p><span> {{ case.date_start_work|date:'d.m.Y' }} </span></li>
+        <li><p> Подано: </p><span> {{ case.date_case_filed|date:'d.m.Y' }} </span></li>
+        <li><p> Признана банкротом: </p><span> {{ case.date_declared_bankrupt|date:'d.m.Y' }} </span></li>
+        <li><p> Завершено: </p><span> {{ case.date_case_completed|date:'d.m.Y' }} </span></li>
+      </ul>
+      <a class="cases-won-card-btn" href="{{ case.case_pdf.url }}" target="_blank">Подробнее</a>
+    </div>
+</div>

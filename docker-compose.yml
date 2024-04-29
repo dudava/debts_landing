@@ -1,0 +1,39 @@
+version: "3"
+services:
+  django:
+    restart: always
+    container_name: debts_app
+    build: 
+      context: .
+      dockerfile: dockerfiles/docker_django.conf
+    environment:
+      - PG_DB=debts_landing
+      - PG_PASSWORD=postgres
+    volumes:
+      - ./code:/code
+    command: bash -c "python /code/debts_landing/manage.py collectstatic --noinput && python /code/debts_landing/manage.py migrate && uwsgi --ini /etc/uwsgi.ini"
+    depends_on:
+      - postgres
+  postgres:
+    restart: always
+    container_name: debts_postgres
+    build:
+      context: .
+      dockerfile: dockerfiles/docker_postgres.conf
+    environment:
+      - POSTGRES_DB=debts_landing
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./dbdata:/var/lib/postgresql/data
+  nginx:
+    restart: always
+    container_name: debts_nginx
+    volumes:
+      - ./code:/code
+    build:
+      context: .
+      dockerfile: dockerfiles/docker_nginx.conf
+    depends_on:
+      - django
+    ports:
+      - "80:80"
