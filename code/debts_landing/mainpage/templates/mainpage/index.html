@@ -258,6 +258,13 @@
         </ul>
       </div>
       <script src="{% static 'js/slider.js' %}"></script>
+      <script>
+        const img = document.querySelector(".preview-img");
+        setTimeout(() => {
+          img.src = "{% static 'img/main_services/img6.jpg' %}";
+        }, 30 * 1000);
+        
+      </script>
     </div>
   </section>
   <section class="dont-lose-time">
