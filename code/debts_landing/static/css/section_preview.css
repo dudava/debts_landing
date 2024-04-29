@@ -140,11 +140,20 @@
 }
 .preview-img {
     position: absolute;
-    width: 530px;
+    width: 531px;
     height: 734px;
     right: 53px;
     top: -42px;
+    animation: fade 10s linear infinite;
+    animation-delay: 55s;
+    animation-iteration-count: 1;
 }
+@keyframes fade {
+  0% { opacity: 1 }
+  50% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
 @media screen and (max-width: 968px) {
     .preview-img {
         display: none;
