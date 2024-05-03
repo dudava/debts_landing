@@ -86,6 +86,13 @@ button {
     .header-contact {
         grid-row: 2;
     }
+    .header-button {
+        display: none;
+    }
+    .header-telephone {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
 }
 footer {
     margin-top: 120px;

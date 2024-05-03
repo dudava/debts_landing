@@ -103,3 +103,12 @@
     width: 100%;
     max-width: 100%;
 }
+@media screen and (max-width: 768px) {
+    .feedback-modal-badge {
+        left: -12px;
+    }
+    .feedback-modal-header h2 span:before {
+        left: -173px;
+        width: 193px;
+    }
+}   
